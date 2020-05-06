@@ -4,7 +4,7 @@ services:
 
     pg10:
         build: .
-        image: rdfito/pg10:1.3
+        image: rdfito/pg10:1.4
         environment:
             POSTGRES_USER: "${POSTGRES_USER:-postgres}"
             POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
