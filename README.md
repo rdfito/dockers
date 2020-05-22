@@ -12,7 +12,7 @@ docker-compose up -d
 ```
 
 ## .ENV
-A `.env` file is required in the `<docker_dir>`. E.g.:
+An `.env` file is required in the `<docker_dir>`. E.g.:
 ```
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=impressivepass
