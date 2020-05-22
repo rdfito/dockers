@@ -4,7 +4,7 @@ services:
 
     pg12:
         build: .
-        image: rdfito/pg12:1.0
+        image: rdfito/pg12:12.3
         environment:
             POSTGRES_USER: "${POSTGRES_USER:-postgres}"
             POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
