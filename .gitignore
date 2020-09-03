@@ -1,4 +1,4 @@
 .env
 */backups/*.sql
 */backups/*.dump
-
+laravel/src/**

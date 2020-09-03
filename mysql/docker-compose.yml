@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+    mysql:
+        image: mariadb:10.3.24
+        container_name: mysql
+        tty: true
+        environment:
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+            MYSQL_DATABASE: "${MYSQL_DATABASE}"
+        volumes:
+            - mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        restart: on-failure
+
+volumes:
+    mysql:
