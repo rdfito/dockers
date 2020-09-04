@@ -17,5 +17,17 @@ services:
             - "3306:3306"
         restart: on-failure
 
+    adminer:
+        image: adminer:4.7.7
+        container_name: adminer
+        environment:
+            ADMINER_DESIGN: "${ADMINER_DESIGN:-pepa-linha}"
+        ports:
+            - "8080:8080"
+        links:
+            - "mysql:mysql"
+        depends_on:
+            - mysql
+
 volumes:
     mysql:
