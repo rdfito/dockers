@@ -4,7 +4,7 @@
 My Docker configuration files.
 
 ## Docker directories
-- `pg10`: [PostgreSQL](https://hub.docker.com/_/postgres) 10 and [pgAdmin4](https://hub.docker.com/r/dpage/pgadmin4)
+- `mysql`: [MariaDB](https://hub.docker.com/_/mariadb) 10 and [adminer](https://hub.docker.com/_/adminer)
 - `pg12`: [PostgreSQL](https://hub.docker.com/_/postgres) 12 and [pgAdmin4](https://hub.docker.com/r/dpage/pgadmin4)
 
 ## Command
