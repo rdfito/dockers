@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
     mysql:
-        image: mariadb:10.3.24
+        image: mariadb:10.3.25
         container_name: mysql
         tty: true
         command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
@@ -13,6 +13,7 @@ services:
             MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
             MYSQL_DATABASE: "${MYSQL_DATABASE}"
         volumes:
+            - ./init:/docker-entrypoint-initdb.d
             - mysql:/var/lib/mysql
         ports:
             - "3306:3306"
