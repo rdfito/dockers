@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+    adminer:
+        image: adminer:4.8.0
+        container_name: adminer
+        environment:
+            ADMINER_DESIGN: "pepa-linha"
+        ports:
+            - "8080:8080"
