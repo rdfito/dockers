@@ -3,8 +3,8 @@ version: "3.8"
 services:
 
     mysql:
-        image: mariadb:10.3.25
-        container_name: mysql
+        image: mariadb:10.3.27
+        container_name: mysql_sa
         tty: true
         command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
         environment:
@@ -14,22 +14,10 @@ services:
             MYSQL_DATABASE: "${MYSQL_DATABASE}"
         volumes:
             - ./init:/docker-entrypoint-initdb.d
-            - mysql:/var/lib/mysql
+            - mysql_sa:/var/lib/mysql
         ports:
             - "3306:3306"
         restart: on-failure
 
-    adminer:
-        image: adminer:4.7.7
-        container_name: adminer
-        environment:
-            ADMINER_DESIGN: "${ADMINER_DESIGN:-pepa-linha}"
-        ports:
-            - "8080:8080"
-        links:
-            - "mysql:mysql"
-        depends_on:
-            - mysql
-
 volumes:
-    mysql:
+    mysql_sa:
